@@ -1,0 +1,47 @@
+{
+    "name": "dakotajune/seeders",
+    "description": "Factories and seeders for Laravel Blueprint that are worth keeping: values from column names and types, real foreign keys, states, reference and demo seeders in dependency order, repeatable output, a preview command, and a guard on what it overwrites.",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "illuminate/console": "^11.0|^12.0|^13.0",
+        "illuminate/filesystem": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "laravel-shift/blueprint": "^2.10"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.23",
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "pestphp/pest": "^3.0|^4.0"
+    },
+    "suggest": {
+        "fakerphp/faker": "What the generated factories run on, and what this package checks `fake:` methods against while it generates.",
+        "dakotajune/blueprint_models": "Works alongside it; a contract test checks that factory values pass the rules it infers."
+    },
+    "autoload": {
+        "psr-4": {
+            "Dakotajune\\Seeders\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dakotajune\\Seeders\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dakotajune\\Seeders\\SeedersServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
